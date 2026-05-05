@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scutiva OSS</title>
+    <link>http://localhost:1313/ScutivaLandingPages/</link>
+    <description>Recent content on Scutiva OSS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/ScutivaLandingPages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/ScutivaLandingPages/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ScutivaLandingPages/contact/</guid>
+      <description>Scutiva is an open-source, self-hosted project maintained in public.&#xA;Project links GitHub repository: NaughtyBeanConsulting/Scutiva LinkedIn: linkedin.com/company/scutiva-oss Email General contact: hello@scutiva.com Support the project If you want to support ongoing open-source development, use the donation link below:&#xA;Buy Me A Naughty Bean Coffee </description>
+    </item>
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://localhost:1313/ScutivaLandingPages/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ScutivaLandingPages/privacy/</guid>
+      <description>This privacy policy explains how the Scutiva marketing site handles information. Scutiva is an open-source, self-hosted project, and this site is intended primarily to provide project information, repository links, and contact details.&#xA;Website data This site may collect limited technical data that is normally available to web infrastructure, such as IP address, browser details, request timing, and standard server logs. This data is used for basic site operation, security, and debugging.</description>
+    </item>
+    <item>
+      <title>Terms of Service</title>
+      <link>http://localhost:1313/ScutivaLandingPages/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ScutivaLandingPages/terms/</guid>
+      <description>Scutiva is an open-source project made available under the MIT License. These terms apply to the Scutiva marketing website, project communications, and any donation links published on this site.&#xA;Open-source software terms The Scutiva source code is licensed separately under the MIT License in the project repository. Your use, modification, distribution, and self-hosting of the software are governed by that license.&#xA;This website does not change, override, or expand the rights granted by the MIT License.</description>
+    </item>
+  </channel>
+</rss>

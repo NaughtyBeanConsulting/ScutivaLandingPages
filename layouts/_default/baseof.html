@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="page-shell">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }} | Open-source self-hosted security operations{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ "img/favicon/favicon-96x96.png" | relURL }}" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="{{ "img/favicon/favicon.svg" | relURL }}">
+  <link rel="shortcut icon" href="{{ "img/favicon/favicon.ico" | relURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "img/favicon/apple-touch-icon.png" | relURL }}">
+  <link rel="manifest" href="{{ "img/favicon/site.webmanifest" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+<body>
+  <div class="site-bg"></div>
+  {{ partial "header.html" . }}
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

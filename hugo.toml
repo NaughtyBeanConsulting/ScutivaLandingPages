@@ -1,0 +1,30 @@
+baseURL = "https://naughtybeanconsulting.github.io/ScutivaLandingPages/"
+languageCode = "en-us"
+title = "Scutiva OSS"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Scutiva is an open-source, self-hosted security operations portal for SSH-based server onboarding, Linux posture assessment, SBOM generation, and package vulnerability review."
+  githubRepo = "https://github.com/NaughtyBeanConsulting/Scutiva"
+  linkedin = "https://linkedin.com/company/scutiva-oss"
+  supportEmail = "hello@scutiva.com"
+  donationLink = "https://donations.scutiva.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Why Scutiva"
+    url = "/#why"
+    weight = 10
+  [[menu.main]]
+    name = "Architecture"
+    url = "/#architecture"
+    weight = 20
+  [[menu.main]]
+    name = "Open Source"
+    url = "/#opensource"
+    weight = 30
