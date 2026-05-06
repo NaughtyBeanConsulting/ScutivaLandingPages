@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" class="page-shell">
 <head>
+  {{ $title := cond .IsHome (printf "%s | Open-source self-hosted Linux security operations" .Site.Title) (printf "%s | %s" .Title .Site.Title) }}
+  {{ $description := .Description | default .Site.Params.description }}
+  {{ $keywords := delimit (or .Params.keywords .Site.Params.keywords) ", " }}
+  {{ $socialImage := (.Site.Params.socialImage | absURL) }}
+  {{ $pageURL := .Permalink }}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ .Site.Title }} | Open-source self-hosted security operations{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $description }}">
+  <meta name="keywords" content="{{ $keywords }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="{{ .Site.Params.companyName }}">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="{{ $pageURL }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ .Site.Params.companyName }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:url" content="{{ $pageURL }}">
+  <meta property="og:image" content="{{ $socialImage }}">
+  <meta property="og:image:secure_url" content="{{ $socialImage }}">
+  <meta property="og:image:alt" content="{{ .Site.Params.socialImageAlt }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ $socialImage }}">
+  <meta name="twitter:image:alt" content="{{ .Site.Params.socialImageAlt }}">
+
+  <meta itemprop="name" content="{{ $title }}">
+  <meta itemprop="description" content="{{ $description }}">
+  <meta itemprop="image" content="{{ $socialImage }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,6 +45,32 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "img/favicon/apple-touch-icon.png" | relURL }}">
   <link rel="manifest" href="{{ "img/favicon/site.webmanifest" | relURL }}">
   <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Scutiva",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Linux",
+      "url": "{{ $pageURL }}",
+      "image": "{{ $socialImage }}",
+      "description": "{{ $description }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.companyName }}",
+        "url": "{{ .Site.BaseURL }}"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "sameAs": [
+        "{{ .Site.Params.githubRepo }}",
+        "{{ .Site.Params.linkedin }}"
+      ]
+    }
+  </script>
 </head>
 <body>
   <div class="site-bg"></div>

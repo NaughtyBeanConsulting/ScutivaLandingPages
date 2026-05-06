@@ -4,7 +4,11 @@ title = "Scutiva OSS"
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Scutiva is an open-source, self-hosted security operations portal for SSH-based server onboarding, Linux posture assessment, SBOM generation, and package vulnerability review."
+  description = "Scutiva is an open-source, self-hosted security operations portal for SSH-based Linux host onboarding, posture assessment, SBOM generation, and package vulnerability review. It is not an external attack-surface scanner."
+  keywords = ["Scutiva", "open source vulnerability scanner", "self-hosted security operations", "SSH vulnerability scanner", "Linux posture scanner", "SBOM scanning", "CVE management", "package vulnerability review", "Roboshadow alternative"]
+  socialImage = "img/Scutiva1024x1024.png"
+  socialImageAlt = "Scutiva logo"
+  companyName = "Scutiva OSS"
   githubRepo = "https://github.com/NaughtyBeanConsulting/Scutiva"
   linkedin = "https://linkedin.com/company/scutiva-oss"
   supportEmail = "hello@scutiva.com"
@@ -20,6 +24,10 @@ disableKinds = ["taxonomy", "term"]
     name = "Why Scutiva"
     url = "/#why"
     weight = 10
+  [[menu.main]]
+    name = "Comparison"
+    url = "/#comparison"
+    weight = 15
   [[menu.main]]
     name = "Architecture"
     url = "/#architecture"
